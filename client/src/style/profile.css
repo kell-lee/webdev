@@ -1,0 +1,149 @@
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  font-family: Georgia, serif;
+}
+
+.user-info-container,
+.order-history-container {
+  margin: 10px;
+  background-color: rgb(203, 197, 197);
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.user-info-label label,
+.user-info-detail {
+  display: flex;
+  align-items: center;
+  line-height: 48px;
+  padding: 0 10px;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+.user-info-input select,
+.user-info-detail {
+  width: 100%;
+  max-width: 300px;
+}
+
+.updateButton,
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.updateButton button,
+.deleteButton button {
+  min-height: 48px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 10px;
+  margin: 10px;
+}
+
+.order-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-img img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.order-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.order-cancel-button {
+  display: flex;
+}
+
+.order-detail,
+.order-cancel-button {
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .user-details,
+  .order-row {
+    grid-template-columns: 1fr;
+  }
+
+  .updateButton,
+  .deleteButton {
+    flex-direction: column;
+  }
+
+  .updateButton button,
+  .deleteButton button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    gap: 10px;
+  }
+
+  .user-details {
+    gap: 10px;
+  }
+
+  .order-row {
+    gap: 5px;
+  }
+
+  .updateButton button,
+  .deleteButton button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

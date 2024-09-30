@@ -1,0 +1,38 @@
+.user-info-container,
+.access-token-container {
+  margin: 10px;
+  background-color: rgb(203, 197, 197);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  gap: 20px;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .user-info-container,
+  .access-token-container {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-info-container,
+  .access-token-container {
+    margin: 3px;
+    padding: 3px;
+    font-size: 0.9rem;
+  }
+
+  pre {
+    font-size: 0.85rem;
+  }
+}

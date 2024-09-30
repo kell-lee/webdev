@@ -1,0 +1,84 @@
+.forecast-container {
+  margin: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  max-width: 100%;
+}
+
+.timeframe {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.timeframe h1 {
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+  flex-grow: 1;
+}
+
+.event-banner {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.event-banner-text {
+  fill: #0033a0;
+  stroke: #bf0a30;
+  stroke-width: 1;
+  font-size: 5vw;
+  font-family: Arial, sans-serif;
+  text-anchor: middle;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-rows: auto;
+  }
+
+  .row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-rows: auto;
+  }
+
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-banner {
+    width: 100%;
+  }
+
+  .event-banner-text {
+    font-size: 4vw;
+  }
+
+  .timeframe {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
